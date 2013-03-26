@@ -12,9 +12,6 @@ namespace Trong
     {
         private GraphicsDeviceManager graphicsDeviceManager;
         private SpriteBatch spriteBatch;
-        private Texture2D testTexture;
-        private Vector2 position = Vector2.Zero;
-        private Vector2 velocity = Vector2.UnitX * 1000;
 
         public TrongGame ()
         {
@@ -31,7 +28,7 @@ namespace Trong
 
         protected override void LoadContent()
         {
-            testTexture = Content.Load<Texture2D>("disc.png");
+            var orangeDiscTexture = Content.Load<Texture2D>("disc.png");
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
             base.LoadContent();
@@ -48,7 +45,7 @@ namespace Trong
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
             spriteBatch.Begin();
-            spriteBatch.Draw(testTexture, position, Color.White);
+
             spriteBatch.End();
 
             base.Draw(gameTime);
@@ -56,11 +53,7 @@ namespace Trong
 
         protected override void Update(GameTime gameTime)
         {
-            if (position.X + 32 > Window.ClientBounds.Width
-                || position.X < 0)
-                velocity = new Vector2(-velocity.X, velocity.Y);
 
-            position += velocity * (float)gameTime.ElapsedGameTime.TotalSeconds;
 
             base.Update(gameTime);
         }

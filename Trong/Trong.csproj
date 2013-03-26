@@ -71,6 +71,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AngleRange.cs" />
+    <Compile Include="Bat.cs" />
+    <Compile Include="Disc.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="PowerUp.cs" />
+    <Compile Include="Ring.cs" />
     <Compile Include="TrongGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
