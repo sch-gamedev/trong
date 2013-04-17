@@ -47,7 +47,7 @@ namespace Trong
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            spriteBatch.Begin();
+            spriteBatch.Begin(SpriteSortMode.Deferred, GraphicsDevice.BlendStates.NonPremultiplied);
             spriteBatch.Draw(testTexture, position, Color.White);
             spriteBatch.End();
 
