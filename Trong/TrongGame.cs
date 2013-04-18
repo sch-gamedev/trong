@@ -14,10 +14,16 @@ namespace Trong
         private SpriteBatch spriteBatch;
         private Ring ring;
         private InputHandler inputHandler;
+        private List<Disc> discs = new List<Disc>();
+        private Random rnd = new Random();
+        private Vector2 max = new Vector2(200.0f, 200.0f);
+        private FunkyInputContext funkyInputCtx = new FunkyInputContext();
 
         public TrongGame ()
         {
             graphicsDeviceManager = new GraphicsDeviceManager(this);
+            graphicsDeviceManager.PreferredBackBufferWidth = 1280;
+            graphicsDeviceManager.PreferredBackBufferHeight = 720;
 
             Content.RootDirectory = "Content";
         }
@@ -26,9 +32,12 @@ namespace Trong
         {
             Window.Title = "Trong";
 
+            inputHandler = new InputHandler();
+            inputHandler.ChangeContext(funkyInputCtx);
+
             ring = new Ring(Window);
 
-            inputHandler = new InputHandler();
+            discs.Add(new Disc(Window, rnd.NextVector2(-max, max)));
             
             base.Initialize();
         }
@@ -38,6 +47,9 @@ namespace Trong
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             ring.LoadContent(Content);
+
+            foreach (var disc in discs)
+                disc.LoadContent(Content);
 
             base.LoadContent();
         }
@@ -56,6 +68,9 @@ namespace Trong
             spriteBatch.Begin(SpriteSortMode.Deferred, GraphicsDevice.BlendStates.NonPremultiplied);
 
             ring.Draw(spriteBatch);
+
+            foreach (var disc in discs)
+                disc.Draw(spriteBatch);
             
             spriteBatch.End();
 
@@ -65,6 +80,17 @@ namespace Trong
         protected override void Update(GameTime gameTime)
         {
             ring.Update(gameTime);
+
+            while (funkyInputCtx.NumToAdd > 0)
+            {
+                funkyInputCtx.NumToAdd--;
+                var d = new Disc(Window, rnd.NextVector2(-max, max));
+                d.LoadContent(Content);
+                discs.Add(d);
+            }
+
+            foreach (var disc in discs)
+                disc.Update(gameTime);
 
             base.Update(gameTime);
         }
