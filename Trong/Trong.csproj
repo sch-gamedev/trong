@@ -50,6 +50,10 @@
     <Reference Include="SharpDX.DXGI">
       <HintPath>..\packages\SharpDX.DXGI.2.4.2\lib\net40\SharpDX.DXGI.dll</HintPath>
     </Reference>
+    <Reference Include="SharpDX.RawInput, Version=2.4.2.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\SharpDX.RawInput.2.4.2\lib\net40\SharpDX.RawInput.dll</HintPath>
+    </Reference>
     <Reference Include="SharpDX.Toolkit">
       <HintPath>..\packages\SharpDX.Toolkit.2.4.2\lib\net40\SharpDX.Toolkit.dll</HintPath>
     </Reference>
@@ -71,6 +75,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IInputContext.cs" />
+    <Compile Include="InputHandler.cs" />
     <Compile Include="Ring.cs" />
     <Compile Include="TrongGame.cs" />
     <Compile Include="Program.cs" />

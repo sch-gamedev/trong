@@ -13,6 +13,7 @@ namespace Trong
         private GraphicsDeviceManager graphicsDeviceManager;
         private SpriteBatch spriteBatch;
         private Ring ring;
+        private InputHandler inputHandler;
 
         public TrongGame ()
         {
@@ -26,6 +27,8 @@ namespace Trong
             Window.Title = "Trong";
 
             ring = new Ring(Window);
+
+            inputHandler = new InputHandler();
             
             base.Initialize();
         }
