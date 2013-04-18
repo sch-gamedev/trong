@@ -75,9 +75,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Disc.cs" />
     <Compile Include="IInputContext.cs" />
     <Compile Include="InputHandler.cs" />
     <Compile Include="Ring.cs" />
+    <Compile Include="Team.cs" />
     <Compile Include="TrongGame.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

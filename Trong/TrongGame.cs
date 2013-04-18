@@ -14,6 +14,7 @@ namespace Trong
         private SpriteBatch spriteBatch;
         private Ring ring;
         private InputHandler inputHandler;
+        private List<Disc> discs = new List<Disc>();
 
         public TrongGame ()
         {
@@ -26,10 +27,10 @@ namespace Trong
         {
             Window.Title = "Trong";
 
+            inputHandler = new InputHandler();
+
             ring = new Ring(Window);
 
-            inputHandler = new InputHandler();
-            
             base.Initialize();
         }
 
@@ -38,6 +39,9 @@ namespace Trong
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             ring.LoadContent(Content);
+
+            foreach (var disc in discs)
+                disc.LoadContent(Content);
 
             base.LoadContent();
         }
@@ -56,6 +60,9 @@ namespace Trong
             spriteBatch.Begin(SpriteSortMode.Deferred, GraphicsDevice.BlendStates.NonPremultiplied);
 
             ring.Draw(spriteBatch);
+
+            foreach (var disc in discs)
+                disc.Draw(spriteBatch);
             
             spriteBatch.End();
 
@@ -65,6 +72,9 @@ namespace Trong
         protected override void Update(GameTime gameTime)
         {
             ring.Update(gameTime);
+
+            foreach (var disc in discs)
+                disc.Update(gameTime);
 
             base.Update(gameTime);
         }
