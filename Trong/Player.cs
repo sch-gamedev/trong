@@ -32,7 +32,7 @@ namespace Trong
         }
         public void DecrementPaddlePos()
         {
-            paddle_position++;
+            paddle_position--;
         }
         public void PowerUpAction()
         {
