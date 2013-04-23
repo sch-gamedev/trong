@@ -21,10 +21,19 @@ namespace Trong
             activeContext = inputContext;
 
             Device.RegisterDevice(UsagePage.Generic, UsageId.GenericKeyboard, DeviceFlags.None);
+            Device.RegisterDevice(UsagePage.Generic, UsageId.GenericMouse, DeviceFlags.None);
 
             Device.KeyboardInput += onKeyboardInput;
+            Device.MouseInput += OnMouseInput;
         }
 
+        private void OnMouseInput(object sender, MouseInputEventArgs e)
+        {
+            if (activeContext != null)
+                activeContext.OnMouseInput(e);
+        }
+
+       
         private void onKeyboardInput(object sender, KeyboardInputEventArgs e)
         {
             if (activeContext != null)
@@ -35,5 +44,8 @@ namespace Trong
         {
             activeContext = to;
         }
+
+
+
     }
 }

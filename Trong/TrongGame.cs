@@ -14,8 +14,14 @@ namespace Trong
         private SpriteBatch spriteBatch;
         private Ring ring;
         private InputHandler inputHandler;
+        private Player playerone;
+        private Player playertwo;
+        private Paddle paddleone;
+        private Paddle paddletwo;
+        private InputContextInGame input;
 
-        public TrongGame ()
+
+        public TrongGame()
         {
             graphicsDeviceManager = new GraphicsDeviceManager(this);
 
@@ -29,7 +35,11 @@ namespace Trong
             ring = new Ring(Window);
 
             inputHandler = new InputHandler();
-            
+            paddleone = new Paddle(Window);
+            paddletwo = new Paddle(Window);
+            playerone = new Player(System.Windows.Forms.Keys.Space, System.Windows.Forms.Keys.Up, System.Windows.Forms.Keys.Down, paddleone);
+            playertwo = new Player(System.Windows.Forms.Keys.Shift, System.Windows.Forms.Keys.W, System.Windows.Forms.Keys.S, paddletwo);
+            input = new InputContextInGame(playerone, playertwo);
             base.Initialize();
         }
 
@@ -38,7 +48,8 @@ namespace Trong
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             ring.LoadContent(Content);
-
+            paddleone.LoadContent(Content);
+            paddletwo.LoadContent(Content);
             base.LoadContent();
         }
 
@@ -56,7 +67,9 @@ namespace Trong
             spriteBatch.Begin(SpriteSortMode.Deferred, GraphicsDevice.BlendStates.NonPremultiplied);
 
             ring.Draw(spriteBatch);
-            
+            paddleone.Draw(spriteBatch);
+            paddletwo.Draw(spriteBatch);
+
             spriteBatch.End();
 
             base.Draw(gameTime);

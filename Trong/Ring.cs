@@ -14,9 +14,10 @@ namespace Trong
         // these values depend on the texture, so it should be stored with and loaded from the asset
         private const float ReferenceViewportHeight = 1080.0f;
         private const float ReferenceRadius = 480.0f;
-        private static readonly Vector2 separatorOrigin = new Vector2(35.0f, 164.0f);
+        private static readonly Vector2 separatorOrigin = new Vector2(540.0f, 540.0f);
 
-        private Texture2D separatorTexture;
+       
+        private Texture2D map;
 
         private Vector2 origin;
         private float scale;
@@ -42,7 +43,9 @@ namespace Trong
 
         public void LoadContent(ContentManager contentManager)
         {
-            separatorTexture = contentManager.Load<Texture2D>("ring_separator.png");
+           
+            map = contentManager.Load<Texture2D>("map_concept_lehetjo.png");
+
         }
 
         private void updateWindowClientSizeDependentFields()
@@ -56,16 +59,18 @@ namespace Trong
 
         public void Draw(SpriteBatch spriteBatch)
         {
-            var topRot = MathUtil.Pi * splitRatio;
-            var bottomRot = MathUtil.Pi * (1.0f - splitRatio);
+        //    var topRot = MathUtil.Pi * splitRatio;
+        //    var bottomRot = MathUtil.Pi * (1.0f - splitRatio);
 
-            var topPos = origin + new Vector2((float)-Math.Cos(topRot), (float)-Math.Sin(topRot)) * radius;
-            var bottomPos = origin + new Vector2((float)-Math.Cos(topRot), (float)Math.Sin(topRot)) * radius;
+        // var topPos = origin + new Vector2((float)-Math.Cos(topRot), (float)-Math.Sin(topRot)) * radius;
+        //    var bottomPos = origin + new Vector2((float)-Math.Cos(topRot), (float)Math.Sin(topRot)) * radius;
 
             // draw "top" separator
-            spriteBatch.Draw(separatorTexture, topPos, null, Color.White, topRot, separatorOrigin, scale, SpriteEffects.None, 0);
-            // draw "bottom" separator
-            spriteBatch.Draw(separatorTexture, bottomPos, null, Color.White, bottomRot, separatorOrigin, scale, SpriteEffects.FlipHorizontally, 0);
+            //spriteBatch.Draw(separatorTexture, topPos, null, Color.White, topRot, separatorOrigin, scale, SpriteEffects.None, 0);
+            //// draw "bottom" separator
+            //spriteBatch.Draw(separatorTexture, bottomPos, null, Color.White, bottomRot, separatorOrigin, scale, SpriteEffects.FlipHorizontally, 0);
+            //draw map
+            spriteBatch.Draw(map, origin, null, Color.White, 0,separatorOrigin, scale, SpriteEffects.None, 0);
         }
 
         public void Update(GameTime gameTime)

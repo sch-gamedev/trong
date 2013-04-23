@@ -9,5 +9,6 @@ namespace Trong
     interface IInputContext
     {
         void OnKeyboardInput(KeyboardInputEventArgs args);
+        void OnMouseInput(MouseInputEventArgs args);
     }
 }

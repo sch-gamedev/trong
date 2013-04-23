@@ -35,33 +35,63 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SharpDX">
-      <HintPath>..\packages\SharpDX.2.4.2\lib\net40\SharpDX.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.D3DCompiler">
-      <HintPath>..\packages\SharpDX.D3DCompiler.2.4.2\lib\net40\SharpDX.D3DCompiler.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.D3DCompiler.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct2D1, Version=2.4.2.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SharpDX.Direct2D1.2.4.2\lib\net40\SharpDX.Direct2D1.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct2D1.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D10">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D10.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct3D11">
-      <HintPath>..\packages\SharpDX.Direct3D11.2.4.2\lib\net40\SharpDX.Direct3D11.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D11.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D11.Effects">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D11.Effects.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Direct3D9">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D9.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectInput">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.DirectInput.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.DirectSound">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.DirectSound.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.DXGI">
-      <HintPath>..\packages\SharpDX.DXGI.2.4.2\lib\net40\SharpDX.DXGI.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.DXGI.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.MediaFoundation">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.MediaFoundation.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.RawInput, Version=2.4.2.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\packages\SharpDX.RawInput.2.4.2\lib\net40\SharpDX.RawInput.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.RawInput.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit">
-      <HintPath>..\packages\SharpDX.Toolkit.2.4.2\lib\net40\SharpDX.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.Toolkit.Compiler">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.Compiler.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit.Game">
-      <HintPath>..\packages\SharpDX.Toolkit.Game.2.4.2\lib\net40\SharpDX.Toolkit.Game.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.Game.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit.Graphics">
-      <HintPath>..\packages\SharpDX.Toolkit.Graphics.2.4.2\lib\net40\SharpDX.Toolkit.Graphics.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.Graphics.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XACT3">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.XACT3.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XAudio2">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.XAudio2.dll</HintPath>
+    </Reference>
+    <Reference Include="SharpDX.XInput">
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.XInput.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -76,7 +106,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IInputContext.cs" />
+    <Compile Include="InputContextInGame.cs" />
     <Compile Include="InputHandler.cs" />
+    <Compile Include="Paddle.cs" />
+    <Compile Include="Player.cs" />
     <Compile Include="Ring.cs" />
     <Compile Include="TrongGame.cs" />
     <Compile Include="Program.cs" />
@@ -90,6 +123,9 @@
   <ItemGroup>
     <Content Include="Content\blue_disc.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\map_concept_lehetjo.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Content\orange_disc.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
