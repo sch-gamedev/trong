@@ -23,7 +23,7 @@ namespace Trong
         private float scale;
         private readonly GameWindow window;
         private bool windowClientSizeDependentFieldsNeedUpdate;
-        //private float splitRatio = 0.5f;
+        private float splitRatio = 0.5f;
         private float radius;
 
         public Ring(GameWindow window)
@@ -77,11 +77,6 @@ namespace Trong
         {
             if (windowClientSizeDependentFieldsNeedUpdate)
                 updateWindowClientSizeDependentFields();
-        }
-
-        public float GetMapRadius
-        {
-            get { return map.Height / 2 * scale; }
         }
     }
 }

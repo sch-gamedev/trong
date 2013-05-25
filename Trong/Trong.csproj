@@ -35,63 +35,63 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="SharpDX">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.D3DCompiler">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.D3DCompiler.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.D3DCompiler.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct2D1, Version=2.4.2.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Direct2D1.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct2D1.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct3D10">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Direct3D10.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D10.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct3D11">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Direct3D11.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D11.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct3D11.Effects">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Direct3D11.Effects.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D11.Effects.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Direct3D9">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Direct3D9.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Direct3D9.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.DirectInput">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.DirectInput.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.DirectInput.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.DirectSound">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.DirectSound.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.DirectSound.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.DXGI">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.DXGI.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.DXGI.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.MediaFoundation">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.MediaFoundation.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.MediaFoundation.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.RawInput, Version=2.4.2.0, Culture=neutral, PublicKeyToken=627a3d6d1956f55a, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.RawInput.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.RawInput.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Toolkit.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit.Compiler">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Toolkit.Compiler.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.Compiler.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit.Game">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Toolkit.Game.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.Game.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.Toolkit.Graphics">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.Toolkit.Graphics.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.Toolkit.Graphics.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.XACT3">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.XACT3.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.XACT3.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.XAudio2">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.XAudio2.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.XAudio2.dll</HintPath>
     </Reference>
     <Reference Include="SharpDX.XInput">
-      <HintPath>..\..\SharpDX\Standard-net40\SharpDX.XInput.dll</HintPath>
+      <HintPath>..\..\..\Bin\Standard-net40\SharpDX.XInput.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -105,7 +105,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Disc.cs" />
     <Compile Include="IInputContext.cs" />
     <Compile Include="InputContextInGame.cs" />
     <Compile Include="InputHandler.cs" />
